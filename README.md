@@ -2,10 +2,10 @@
 DigiClaim is an insurance claim validation system which will be extensively beneficial for the insurance companies to validate the insurance claims and warranty claims over the damaged mobile Phones. DigiClaim can also be useful for the Performance and Quality Checking of the various parameters and attributes of the mobile device. DigiClaim will automate the complete process of Insurance claiming for damage done to the mobile screen, thereby saving the time of manual intervention making it cost effective.
 
 ## Development Stack
-Front-End Development: HTML,CSS,Bootstrap,Vanilla JS, Android XML
-Data-Processing: Python 3.6.7, Android Java
-Back-End Development: Django-Python Framework, openCV
-Database management: DB SQLite, Firebase
+1. Front-End Development: HTML,CSS,Bootstrap,Vanilla JS, Android XML
+2. Data-Processing: Python 3.6.7, Android Java
+3. Back-End Development: Django-Python Framework, openCV
+4. Database management: DB SQLite, Firebase
 
 ## References
 1. ColorCrack: Identifying Cracks in Glass 
