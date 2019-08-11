@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block title %}Student Portal{% endblock %}
+{% load static %}
+{% block body %}
+
+<div class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="card card-stats">
+					<div class="card-header card-header-warning card-header-icon">
+						<div class="card-icon">
+							<i class="material-icons">assignment</i>
+						</div>
+						<p class="card-category">Total Claims</p><br>
+						<h3 class="card-title">{{ claim_count }}</h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="card card-stats">
+					<div class="card-header card-header-success card-header-icon">
+						<div class="card-icon">
+							<i class="material-icons">assignment_ind</i>
+						</div>
+						<p class="card-category">Total Users</p><br>
+						<h3 class="card-title">{{ no_of_users }}</h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="card card-stats">
+					<div class="card-header card-header-danger card-header-icon">
+						<div class="card-icon">
+							<i class="material-icons">assessment</i>
+						</div>
+						<p class="card-category">Total Processed Claims</p><br>
+						<h3 class="card-title">{{ p_claim_count }}</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Courses -->
+	<div class="row">
+		{% for claim in claims %}
+		<div class="col-md-4">
+			<div class="card card-chart">
+				<div class="card-header card-header-success">
+					<div>
+						<img class="card-img-bottom" src="{{ claim.device_image.url }}" alt="Card image" style="width:100%; height:400px">
+					</div>
+				</div>
+				<div class="card-body">
+					<h4 class="card-title">{{ claim.model_name }}</h4>
+					<p class="card-category">{{ claim.brand }}</p>
+				</div>
+				<div class="card-footer">
+					<div class="stats">
+						<a href="{% url 'detection:claimInfo' claim.claim_id %}" class="btn btn-primary">Show details</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+
+</div>
+</div>
+{% endblock %}
+

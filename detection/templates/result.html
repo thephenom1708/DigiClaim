@@ -1,0 +1,114 @@
+	{% extends 'base.html' %}
+	{% block title %}DigiClaim{% endblock %}
+	{% load static %}
+	{% block body %}
+
+	<div class="content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="card card-chart">
+						<div class="card-header card-header-primary">
+							<h4 class="card-title">{{ claim.model_name }}</h4>
+							<p class="card-category">Device Details</p>
+						</div>
+						<div class="card-body">
+							<div>
+								<img class="card-img-bottom" src="{{ claim.device_image.url }}" alt="Card image" style="width:80%; height:600px;">
+							</div><br>
+							<div class="row">
+								<div class="col-md-6">
+									<b>Brand : </b>{{ brand }}
+								</div>
+								<div class="col-md-6">
+									<b>Model ID : </b>{{ model_id }}
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<b>SDK Version : </b>{{ sdk }}
+								</div>
+								<div class="col-md-6">
+									<b>Android Version : </b>{{ version_code }}
+								</div>
+							</div><br>
+							<div class="row">
+								<div class="col-md-12">
+									<b>Scratch Detection Result</b>
+									{% if flag is True %}
+										<p>Scratches are Present on the central part of screen.</p>
+									{% else %}
+										<p>There are no any scratches on the screen</p>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+						<div class="card-footer">
+								<div class="col-md-4 offset-6">
+									<div class="stats">
+										<a href="{{ pdf }}" download><button class="btn btn-warning">Download Attributes Report</button></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-header card-header-success">
+							<h4 class="card-title">Scratch Detection</h4>
+							<p class="card-category">Processed Image Details</p>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table class="table">
+									<thead class=" text-primary">
+										<th>Sr No</th>
+										<th>Original Image</th>
+										<th>Denoised Image</th>
+										<th>L1 Norm</th>
+										<th>L2 Norm</th>
+						  			</thead>
+									<tbody>
+										<td>1</td>
+										<td>
+											<a href="{{ processed_claim.initial_image.url }}">{{ processed_claim.initial_image }}</a>
+											<a href="{{ processed_claim.initial_image.url }}" download>
+												<button class="btn btn-danger btn-sm"><i class="material-icons">get_app</i></button>
+											</a>
+										</td>
+										<td>
+											<a href="{{ processed_claim.image_denoised.url }}">{{ processed_claim.image_denoised }}</a>
+											<a href="{{ processed_claim.image_denoised.url }}" download>
+												<button class="btn btn-danger btn-sm"><i class="material-icons">get_app</i></button>
+											</a>
+										</td>
+										<td>
+											<a href="{{ processed_claim.image_l1.url }}">{{ processed_claim.image_l1 }}</a>
+											<a href="{{ processed_claim.image_l1.url }}" download>
+												<button class="btn btn-danger btn-sm"><i class="material-icons">get_app</i></button>
+											</a>
+										</td>
+										<td>
+											<a href="{{ processed_claim.image_l2.url }}">{{ processed_claim.image_l2 }}</a>
+											<a href="{{ processed_claim.image_l2.url }}" download>
+												<button class="btn btn-danger btn-sm"><i class="material-icons">get_app</i></button>
+											</a>
+										</td>
+						  			</tbody>
+								</table>
+					  		</div>
+						</div>
+				  	</div>
+				</div>
+			</div>
+
+
+
+		</div>
+	</div>
+
+	{% endblock %}

@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block title %}User Profile{% endblock %}
+{% load static %}
+{% block body %}
+
+<div class="content">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="card">
+					<div class="card-header card-header-primary">
+						<h4 class="card-title">User Profile</h4>
+						<p class="card-category">Personal Information</p>
+					</div>
+					<div class="card-body">
+						<form method="POST" action="{% url 'detection:updateProfile' %}" enctype="multipart/form-data">
+							{% csrf_token %}
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="bmd-label-floating">Username</label>
+										<input type="text" name="username" class="form-control">
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="bmd-label-floating">First Name</label>
+										<input type="text" name="firstName" class="form-control">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="bmd-label-floating">Last Name</label>
+										<input type="text" name="lastName" class="form-control">
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="bmd-label-floating">Mobile Number</label>
+										<input type="text" class="form-control" name="mobile">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="bmd-label-floating">Email ID</label>
+										<input type="email" class="form-control" name="email" value="{{ user.email }}" readonly>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="bmd-label-floating">City</label>
+										<input type="text" class="form-control" name="city">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="bmd-label-floating">State</label>
+										<input type="text" class="form-control" name="state">
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Address</label>
+										<div class="form-group">
+											<label class="bmd-label-floating"></label>
+											<textarea class="form-control" rows="3" name="address"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<input type="submit" class="btn btn-primary pull-right" value="Update Info">
+							<div class="clearfix"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
