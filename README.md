@@ -9,7 +9,6 @@ DigiClaim is an insurance claim validation system which will be extensively bene
 
 ## User Authentication :
 The user authentication is carried out by firebase authentication service in Android application 
-![](https://lh4.googleusercontent.com/zWLf656EHCrNatAvINlLp1Ou9CgDCC3Y_tGoVGDlexRy_MoBZQKe1g8wEixC5yJaXL8ZgWjMth-rm0SAqQBq-p4omPu_xQQOHkAZ82u-ylRrEnaE2JuaZAZWDMe5rCgS2HItYeMv)
                             
 ## Android App parameters testing:
 * The app will run on the mobile on which testing is to be done.
