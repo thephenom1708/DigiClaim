@@ -9,15 +9,14 @@ DigiClaim is an insurance claim validation system which will be extensively bene
 
 ## User Authentication :
 The user authentication is carried out by firebase authentication service in Android application 
-
-![](https://lh5.googleusercontent.com/IjqbnNhYvTx3p2-ZpmGY9R26fXU9I2iM5TM2MyGB36EIrJsTdW7qULZFaPGSDu2cu_fFywNrclyXe-y2I_mtsXJu0xEP0-aYJqvowc5H)
+![](https://lh4.googleusercontent.com/zWLf656EHCrNatAvINlLp1Ou9CgDCC3Y_tGoVGDlexRy_MoBZQKe1g8wEixC5yJaXL8ZgWjMth-rm0SAqQBq-p4omPu_xQQOHkAZ82u-ylRrEnaE2JuaZAZWDMe5rCgS2HItYeMv)
                             
 ## Android App parameters testing:
 * The app will run on the mobile on which testing is to be done.
 * The test will check for the working of main components like GPS, Bluetooth, Wifi, Hotspot, FlashLight along with the list of sensors.
 * After the testing is completed the report is generated in the form of pdf and is sent to the application database server hosted on the firebase.
-                 	
- 
+![](https://lh4.googleusercontent.com/twO53XpYxOmuabcyzw_TVhdc2vAQLCfQRhkqk2vP03H29w52K2-MN-RIWGFyDXcZ2zlhCt-pQWaoY7do9SzEt8JUUaOnreMgcsipJxeP0Blau0006GhKe8VpfbqtfLQRPEPMV9Jg)
+![](https://lh5.googleusercontent.com/NG0pZaMcLyV665eyq4c1If6Es3up6L2FZyvOAB8iqYSDmbZfl5prqHHtjQ3uGDJdXuAiY8rk2qluhi_TcRduADwnvUgvnA6b48e6T_RHb6SLJ4T86RuH63FgcqQgziGyZKNxh0fz)
 
 ## Scratch/Crack Detection on Mobile Screen Using Image Processing:
 * The user will upload the image on the processing server, the testing will be performed for scratch/crack detection.
@@ -28,17 +27,14 @@ The user authentication is carried out by firebase authentication service in And
   4. According to standards, 18% of total screen size is a body, 9 % from the top, 9% from the bottom so we check for         scratches in the defined region. 
   5. If scratches are present on the main part of the screen then those are detected and the results are saved.
 * The detection report is sent to the application server again.
+![](https://lh5.googleusercontent.com/IjqbnNhYvTx3p2-ZpmGY9R26fXU9I2iM5TM2MyGB36EIrJsTdW7qULZFaPGSDu2cu_fFywNrclyXe-y2I_mtsXJu0xEP0-aYJqvowc5H)
 
+![](https://lh3.googleusercontent.com/mmx23kgzdslH21yd6aR4URf1FQbn57jioKOBjutjjXIDRPwzTa3z3ieYVEIu5mzkj6CRKRWgFgO1KuHSve9cwDzrMNkPO4fvxAiGBJT0IRy_VyvMLdFzUr78MqhDguTJo4dtPs5S)
 	
-
 ## Database Management:
 * A firebase as a centralised application database server, whereas relational DBSQLite-3 as a database on the processing server for the project.
 * The user data and the result of performance and QA testing of the mobile phone are stored on the firebase. While all the processing data required while scratch detection is stored on DBSQLite-3 database server.
-* Complete normalization is also achieved in different relations of the database. 
-
-
-
-
+* Complete normalization is also achieved in different relations of the database.
 
 ## Admin Section:
 * This panel is accessed by the administrator of the web portal of DigiClaim.
