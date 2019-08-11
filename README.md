@@ -7,6 +7,48 @@ DigiClaim is an insurance claim validation system which will be extensively bene
 3. Back-End Development: Django-Python Framework, openCV
 4. Database management: DB SQLite, Firebase
 
+## User Authentication :
+The user authentication is carried out by firebase authentication service in Android application 
+
+                            
+	
+
+
+
+## Android App parameters testing:
+* The app will run on the mobile on which testing is to be done.
+* The test will check for the working of main components like GPS, Bluetooth, Wifi, Hotspot, FlashLight along with the list of sensors.
+* After the testing is completed the report is generated in the form of pdf and is sent to the application database server hosted on the firebase.
+                 	
+ 
+
+## Scratch/Crack Detection on Mobile Screen Using Image Processing:
+* The user will upload the image on the processing server, the testing will be performed for scratch/crack detection.
+* Steps involved in scratch/crack detection
+  1. Noise removal using Median blur.
+  2. Canny’s Edge detection algorithm is applied to the noiseless image.
+  3. Thresholding is done to get a clear view of scratches
+  4. According to standards, 18% of total screen size is a body, 9 % from the top, 9% from the bottom so we check for         scratches in the defined region. 
+  5. If scratches are present on the main part of the screen then those are detected and the results are saved.
+* The detection report is sent to the application server again.
+
+	
+
+## Database Management:
+* A firebase as a centralised application database server, whereas relational DBSQLite-3 as a database on the processing server for the project.
+* The user data and the result of performance and QA testing of the mobile phone are stored on the firebase. While all the processing data required while scratch detection is stored on DBSQLite-3 database server.
+* Complete normalization is also achieved in different relations of the database. 
+
+
+
+
+
+## Admin Section:
+* This panel is accessed by the administrator of the web portal of DigiClaim.
+* All the insurance claims regarding the screen damage are available to view in the admin section.
+* These reports will be further sent to the concerned Insurance company or authority by the administrator.
+
+
 ## References
 1. ColorCrack: Identifying Cracks in Glass 
   Author: James Max Kanter
