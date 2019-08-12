@@ -14,7 +14,7 @@ The user authentication is carried out by firebase authentication service in And
 * The app will run on the mobile on which testing is to be done.
 * The test will check for the working of main components like GPS, Bluetooth, Wifi, Hotspot, FlashLight along with the list of sensors.
 * After the testing is completed the report is generated in the form of pdf and is sent to the application database server hosted on the firebase.
-![](https://lh4.googleusercontent.com/twO53XpYxOmuabcyzw_TVhdc2vAQLCfQRhkqk2vP03H29w52K2-MN-RIWGFyDXcZ2zlhCt-pQWaoY7do9SzEt8JUUaOnreMgcsipJxeP0Blau0006GhKe8VpfbqtfLQRPEPMV9Jg)
+![](https://lh4.googleusercontent.com/twO53XpYxOmuabcyzw_TVhdc2vAQLCfQRhkqk2vP03H29w52K2-MN-RIWGFyDXcZ2zlhCt-pQWaoY7do9SzEt8JUUaOnreMgcsipJxeP0Blau0006GhKe8VpfbqtfLQRPEPMV9Jg = 100x100)
 ![](https://lh5.googleusercontent.com/NG0pZaMcLyV665eyq4c1If6Es3up6L2FZyvOAB8iqYSDmbZfl5prqHHtjQ3uGDJdXuAiY8rk2qluhi_TcRduADwnvUgvnA6b48e6T_RHb6SLJ4T86RuH63FgcqQgziGyZKNxh0fz)
 
 ## Scratch/Crack Detection on Mobile Screen Using Image Processing:
